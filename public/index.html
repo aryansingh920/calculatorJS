@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    html{
+      overflow: hidden;
+    }
+      body {
+        background-color: #2e2e2e;
+      }
+      .mainB{
+        /* margin-top: 1rem; */
+        width:18rem;
+        background-color: #000000;
+        /* padding: 5%;
+        margin:5%; */
+        /* margin:1rem;
+        pa */
+        padding: 1rem;
+        /* border-radius: 10px; */
+        /* margin-top: 20px;
+        margin-bottom: 20px; */
+        vertical-align: middle;
+        
+      }
+      .display{
+          /* width: 70%; */
+          text-align: end;
+          color: rgb(255, 255, 255);
+          font-family: 'digital-7';
+          /* background-color: rgba(45, 153, 55, 0.836); */
+      }
+      @font-face {
+        font-family:'digital-7';
+          src: url('digital-7.ttf');
+      }
+      .btn{
+          width:3rem;
+          height:3rem;
+          margin:0.5rem;
+          text-align: center;
+          /* font-size: large; */
+          border-radius: 50rem;
+        /* width:20% !important; */
+      }
+  </style>
+  <body style="background-image: url('https://picsum.photos/1024/1600');height:40rem;">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <!-- UIkit JS -->
+    <div  >
+      <h1></h1>
+        <div  class="mainB container-fluid">
+            <div class="display">
+                <h1 style="font-family: 'digital-7';color:white;font-size: 3.4rem;" id="display" class="animate__animated animate__flash animate__infinite	" style="color: white;">|</h1>
+            </div>
+            <div>
+                <div class="uk-button-group">
+                    <button id="ac" class="btn btn-danger">CE</button>
+                    <button id="C" class="btn btn-danger">C</button>
+                    <button id="mod" class="btn btn-secondary">mod</button>           
+                    <button id="div" class="btn btn-warning">÷</button>
+                </div>
+            </div>
+            <div>
+                <div class="uk-button-group">
+                    <button id="h" class="btn btn-dark">7</button>
+                    <button id="i" class="btn btn-dark">8</button>
+                    <button id="j" class="btn btn-dark">9</button>
+                    <button id="mul" class="btn btn-warning">*</button>
+                </div>
+            </div>
+            <div>
+                <div class="uk-button-group">
+                    <button id="e" class="btn btn-dark">4</button>
+                    <button id="f" class="btn btn-dark">5</button>
+                    <button id="g" class="btn btn-dark">6</button>
+                    <button id="sub" class="btn btn-warning">-</button>
+                </div>
+            </div>
+            <div>
+                <div class="uk-button-group">
+                    <button id="b" class="btn btn-dark">1</button>
+                    <button id="c" class="btn btn-dark">2</button>
+                    <button id="d" class="btn btn-dark">3</button>
+                    <button id="add" class="btn btn-warning">+</button>
+                </div>
+            </div><div>
+                <div class="uk-button-group">
+                    <button id="a" style="width:7rem;" class="btn btn-dark">0</button>
+                    <button id="dot" class="btn btn-dark">.</button>
+                    <button id="equal" class="btn btn-warning">=</button>
+                    <!-- <button class="uk-button uk-button-danger">1</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="uk-heading-line uk-text-center"><span><a style="color: white;" href="http://aryansingh920.github.io/AryanSingh">Aryan Singh</a> </span></h1>
+    <script>
+      let display = document.getElementById('display');
+      document.addEventListener('keydown', (event) => {
+  var name = event.key;
+  var code = event.code;
+  // Alert the key name and key code on keydown
+  // alert(`Key pressed ${name} \r\n Key code value: ${code}`);
+  // console.log(name)
+  if(name === '0') fun0()
+  if(name === '1') fun1()
+  if(name === '2') fun2()
+  if(name === '3') fun3()
+  if(name === '4') fun4()
+  if(name === '5') fun5()
+  if(name === '6') fun6()
+  if(name === '7') fun7()
+  if(name === '8') fun8()
+  if(name === '9') fun9()
+  if(name === '.') fundot()
+  if(name === '+') funadd()
+  if(name === '-') funsub()
+  if(name === '*') funmul()
+  if(name === '/') fundiv()
+  if(name === '%') funmod()
+  if(name === "Enter") funenter()
+  if(name === "Backspace") funC()
+}, false);
+
+
+      var fun0 = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '0';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '0';
+        }
+      }
+      var fun1 = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '1';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '1';
+        }
+      }
+      var fun2 = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '2';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '2';
+        }
+      }
+      var fun3 = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '3';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '3';
+        }
+      }
+      var fun4 = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '4';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '4';
+        }
+      }
+      var fun5 = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '5';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '5';
+        }
+      }
+      var fun6 = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '6';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '6';
+        }
+      }
+      var fun7 = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '7';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '7';
+        }
+      }
+      var fun8 = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '8';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '8';
+        }
+      }
+      var fun9 = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '9';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '9';
+        }
+      }
+      var fundot = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '0.';
+          display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '.';
+        }
+      }
+      var funadd = function(){
+        if(display.innerHTML == "|"){
+          // display.innerHTML = ' + ';
+          // display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '+';
+        }
+      }
+      var funsub = function(){
+        if(display.innerHTML == "|"){
+          // display.innerHTML = ' - ';
+          // display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '-';
+        }
+      }
+      var funmul = function(){
+        if(display.innerHTML == "|"){
+          // display.innerHTML = ' * ';
+          // display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '*';
+        }
+      }
+      var fundiv = function(){
+        if(display.innerHTML == "|"){
+          // display.innerHTML = ' / ';
+          // display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '/';
+        }
+      }
+      var funenter = function(){
+        if(display.innerHTML == "|"){
+          display.innerHTML = '|';
+          display.setAttribute("class", "");
+        }else{
+          let value = eval(display.innerHTML);
+          if(! Number.isInteger(value)){
+            value = value.toPrecision(5);
+          }
+          display.innerHTML = value;
+        }
+      }
+      var funC = ()=>{
+        display.innerHTML = (display.innerHTML).slice(0,-1);
+        if(display.innerHTML == ""){
+        display.innerHTML = (display.innerHTML)+"|";
+        display.setAttribute("class", "animate__animated animate__flash animate__infinite	");
+        }
+        // else{
+        //   display.innerHTML = '|';
+        // }
+      }
+      var funmod = function(){
+        if(display.innerHTML == "|"){
+          // display.innerHTML = '%';
+          // display.setAttribute("class", "");
+        }else{
+          display.innerHTML += '%';
+        }
+      }
+      var funac = ()=>{
+        if (display.innerHTML != '|') {
+          display.innerHTML = '|';
+          display.setAttribute("class", "animate__animated animate__flash animate__infinite	");
+        }
+        // else{
+        //   display.innerHTML = '|';
+        // }
+      }
+      document.querySelector('#a').addEventListener('click',fun0)
+      document.querySelector('#b').addEventListener('click',fun1)
+      document.querySelector('#c').addEventListener('click',fun2)
+      document.querySelector('#d').addEventListener('click',fun3)
+      document.querySelector('#e').addEventListener('click',fun4)
+      document.querySelector('#f').addEventListener('click',fun5)
+      document.querySelector('#g').addEventListener('click',fun6)
+      document.querySelector('#h').addEventListener('click',fun7)
+      document.querySelector('#i').addEventListener('click',fun8)
+      document.querySelector('#j').addEventListener('click',fun9)
+      document.querySelector('#C').addEventListener('click',funC);
+      document.querySelector('#ac').addEventListener('click',funac);
+      document.querySelector('#dot').addEventListener('click',fundot)
+      document.querySelector('#add').addEventListener('click',funadd)
+      document.querySelector('#sub').addEventListener('click',funsub)
+      document.querySelector('#mul').addEventListener('click',funmul)
+      document.querySelector('#div').addEventListener('click',fundiv)
+      document.querySelector('#mod').addEventListener('click',funmod)
+      document.querySelector('#equal').addEventListener('click',funenter)
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
+    <script src="" async defer></script>
+  </body>
+</html>
